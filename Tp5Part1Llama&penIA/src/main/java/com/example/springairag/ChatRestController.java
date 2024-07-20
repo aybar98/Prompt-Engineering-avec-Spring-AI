@@ -90,7 +90,7 @@ public class ChatRestController {
 
     @GetMapping(path = "/generateImage", produces = MediaType.IMAGE_PNG_VALUE)
     public byte[] generateImageDALLE() throws IOException {
-        OpenAiImageApi openAiApi = new OpenAiImageApi("sk-proj-lx2DBLW1L4UjZKT1KLUnT3BlbkFJqkOT6O5ZEN8XUqUXN3Nl");
+        
         OpenAiImageModel openAiImageModel = new OpenAiImageModel(openAiApi);
         ImageResponse response = openAiImageModel.call(
                 new ImagePrompt("un chat avec un costume dans sa fête avec un café dans sa main droite ",
